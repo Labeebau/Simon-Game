@@ -5,7 +5,7 @@ var gamePattern = [],
 var keyPressed = false;
 var level = 0;
 
-if (window.innerWidth <= 576) {
+if (window.innerWidth <= 620) {
   $("h1").text("");
 
   $(".btn-play").css("visibility", "visible");
@@ -59,7 +59,7 @@ function animatePress(currentColor) {
 }
 function gameOver() {
   $("body").addClass("game-over");
-  if (window.innerWidth <= 576) {
+  if (window.innerWidth <= 620) {
     $("h1").text("Game Over");
     $(".btn-play").css("visibility", "visible");
   } else $("h1").text("Game Over , Press Any Key To Restart");
