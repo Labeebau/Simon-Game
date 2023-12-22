@@ -5,14 +5,14 @@ var gamePattern = [],
 var keyPressed = false;
 var level = 0;
 
-if (window.innerWidth <= 620) {
-  $("h1").text("");
+if (window.innerWidth <= 576) {
+  // $("h1").text("");
 
-  $(".btn-play").css("visibility", "visible");
+  $(".play").css("visibility", "visible");
 } else {
-  $("h1").text("Press A Key to Start");
+  // $("h1").text("Press A Key to Start");
 
-  $(".btn-play").css("visibility", "hidden");
+  $(".play").css("visibility", "hidden");
 }
 $(".btn").click(function () {
   var userChosenColor = this.id;
@@ -29,10 +29,10 @@ $("body").keypress(function (event) {
     nextSequence();
   }
 });
-$(".btn-play").click(function () {
+$(".play").click(function () {
   keyPressed = true;
   nextSequence();
-  $(".btn-play").css("visibility", "hidden");
+  $(".play").css("visibility", "hidden");
 });
 function nextSequence() {
   randomNumber = Math.floor(Math.random() * 4);
@@ -59,11 +59,10 @@ function animatePress(currentColor) {
 }
 function gameOver() {
   $("body").addClass("game-over");
-  if (window.innerWidth <= 620) {
+  // if (window.innerWidth <= 576) {
     $("h1").text("Game Over");
-  } else $("h1").text("Game Over , Press Any Key To Restart");
-    $(".btn-play").css("visibility", "visible");
-  
+  // } else $("h1").text("Game Over , Press Any Key To Restart");
+  $(".play").css("visibility", "visible");
   setTimeout(function () {
     $("body").removeClass("game-over");
   }, 100); //removes the class'pressed' after a delay of 100 milliseconds.
