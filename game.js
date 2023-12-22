@@ -8,11 +8,11 @@ var level = 0;
 if (window.innerWidth <= 576) {
   $("h1").text("");
 
-  $(".btn-play").css("display", "block");
+  $(".btn-play").css("visibility", "visible");
 } else {
   $("h1").text("Press A Key to Start");
 
-  $(".btn-play").css("display", "none");
+  $(".btn-play").css("visibility", "hidden");
 }
 $(".btn").click(function () {
   var userChosenColor = this.id;
@@ -32,7 +32,7 @@ $("body").keypress(function (event) {
 $(".btn-play").click(function () {
   keyPressed = true;
   nextSequence();
-  $(".btn-play").css("display", "none");
+  $(".btn-play").css("visibility", "hidden");
 });
 function nextSequence() {
   randomNumber = Math.floor(Math.random() * 4);
@@ -61,7 +61,7 @@ function gameOver() {
   $("body").addClass("game-over");
   if (window.innerWidth <= 576) {
     $("h1").text("Game Over");
-    $(".btn-play").css("display", "block");
+    $(".btn-play").css("visibility", "visible");
   } else $("h1").text("Game Over , Press Any Key To Restart");
   setTimeout(function () {
     $("body").removeClass("game-over");
