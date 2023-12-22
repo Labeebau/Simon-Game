@@ -6,10 +6,13 @@ var keyPressed = false;
 var level = 0;
 
 if (window.innerWidth <= 576) {
-  $(".btn-play").css("display", "block");
   $("h1").text("");
+
+  $(".btn-play").css("display", "block");
 } else {
-  $(".btn-play").css("display","none");
+  $("h1").text("Press A Key to Start");
+
+  $(".btn-play").css("display", "none");
 }
 $(".btn").click(function () {
   var userChosenColor = this.id;
