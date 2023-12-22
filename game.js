@@ -61,8 +61,9 @@ function gameOver() {
   $("body").addClass("game-over");
   if (window.innerWidth <= 620) {
     $("h1").text("Game Over");
-    $(".btn-play").css("visibility", "visible");
   } else $("h1").text("Game Over , Press Any Key To Restart");
+    $(".btn-play").css("visibility", "visible");
+  
   setTimeout(function () {
     $("body").removeClass("game-over");
   }, 100); //removes the class'pressed' after a delay of 100 milliseconds.
