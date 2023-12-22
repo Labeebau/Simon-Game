@@ -9,7 +9,7 @@ if (window.innerWidth <= 576) {
   $(".btn-play").css("display", "block");
   $("h1").text("");
 } else {
-  $(".btn-play").style.display = "none";
+  $(".btn-play").css("display","none");
 }
 $(".btn").click(function () {
   var userChosenColor = this.id;
