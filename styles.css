@@ -28,7 +28,6 @@ body {
 }
 .btn-play{
   margin: 25px;
-  display: none;
   border: 10px solid black;
   border-radius: 20%;
   height: 60;
